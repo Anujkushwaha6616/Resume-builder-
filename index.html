@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Digital Resume Builder</h1>
+
+    <div class="container">
+        <form id="resumeForm">
+            <h2>Personal Information</h2>
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="text" id="email" placeholder="Email" required>
+            <input type="text" id="phone" placeholder="Phone" required>
+            <input type="location" id="city" placeholder="city" required>
+            <input type="text" id="Skill" placeholder="Skill" required>
+
+            <h2>Education</h2>
+            <input type="text" id="education" placeholder="Education Details" required>
+
+            <h2>Experience</h2>
+            <textarea id="experience" placeholder="Experience Details" required></textarea>
+
+            <button type="button" onclick="generateResume()">Generate Resume</button>
+        </form>
+
+        <div id="resumePreview">
+            <h2>Resume Preview</h2>
+            <div id="resumeContent">
+                <!-- Dynamic Resume Content Goes Here -->
+            </div>
+            <button onclick="downloadPDF()">Download as PDF</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
